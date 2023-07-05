@@ -3,6 +3,12 @@ This library allows to layout events into a calendar for visualization, it gener
 
 ![Example](./docs/example.png)
 
+## Installation
+
+```shell
+npm i @hjco/layout-schedule
+```
+
 ## Example
 
 Given this events:

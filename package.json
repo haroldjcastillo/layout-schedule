@@ -1,5 +1,5 @@
 {
-  "name": "@haroldjcastillo/layout-schedule",
+  "name": "@hjco/layout-schedule",
   "description": "Layout events into a calendar for visualization",
   "version": "0.0.1",
   "main": "./dist/index.js",
