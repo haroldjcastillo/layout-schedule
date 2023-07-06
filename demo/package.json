@@ -4,8 +4,8 @@
   "description": "Layout Schedule Demo",
   "source": "src/index.html",
   "scripts": {
-    "start": "rimraf dist && parcel",
-    "build": "rimraf dist && parcel build src/index.html --public-url ./"
+    "start": "rimraf dist && parcel src/index.html",
+    "build": "rimraf dist && parcel build src/index.html --no-scope-hoist --public-url ./"
   },
   "author": "haroldjcastillo",
   "license": "Apache-2.0",
