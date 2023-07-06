@@ -21,14 +21,14 @@ export interface ISlot {
     cols: number;
     rectangle: IRectangle;
 
-    draw(fn: (slot: ISlot) => HTMLElement): HTMLElement;
+    draw<T>(fn: (slot: ISlot) => T): void;
     overlaps(other: ISlot): boolean;
 }
 
 export interface ICalendar {
-    element: HTMLElement
     events: IEvent[]
     width: number
     height: number
     instance: ILayout
+    draw<T>(fn: (slot: ISlot) => T) : void;
 }

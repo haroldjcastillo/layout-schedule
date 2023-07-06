@@ -9,7 +9,22 @@ This library allows to layout events into a calendar for visualization, it gener
 npm i @hjco/layout-schedule
 ```
 
-## Example
+## 
+
+```
+// Select the instance or algorithm
+const instance = (width, _, events) => new Matrix(events, width);
+// Create a new calendar, pass a HTMLElement, JSON, and the instance 
+calendar = new Calendar(element, input, instance);
+// Draw each received slot wherever you prefer
+calendar.draw(drawSlotFunction);
+```
+
+## Demo
+
+TODO
+
+## Examples
 
 Given this events:
 

@@ -27,7 +27,7 @@ export class Slot implements ISlot {
         this.rectangle = new Rectangle(0, Slot.minute(event.start), 0, Slot.difference(event.start, event.end))
     }
 
-    draw(fn: (slot: ISlot) => HTMLElement): HTMLElement {
+    draw<T>(fn: (slot: ISlot) => T): T {
         return fn(this)
     }
 
@@ -51,23 +51,21 @@ export class Slot implements ISlot {
 }
 
 export class Calendar implements ICalendar {
-    element: HTMLElement;
     events: IEvent[];
     width: number;
     height: number;
     instance: ILayout;
 
-    constructor(element: HTMLElement, events: IEvent[], fn: (width: number, height: number, events: IEvent[]) => ILayout) {
-        this.element = element;
+    constructor(width: number, height: number, events: IEvent[], fn: (width: number, height: number, events: IEvent[]) => ILayout) {
         this.events = events;
-        this.width = element.clientWidth;
-        this.height = element.clientHeight;
+        this.width = width;
+        this.height = height;
         this.instance = fn(this.width, this.height, this.events);
     }
 
-    draw(fn: (slot: ISlot) => HTMLElement) {
+    draw<T>(fn: (slot: ISlot) => T) {
         this.instance.process()
-            .forEach(slot => this.element.append(slot.draw(fn)));
+            .forEach(slot => slot.draw(fn));
     }
 
 }
