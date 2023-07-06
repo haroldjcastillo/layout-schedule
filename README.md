@@ -16,7 +16,7 @@ import {Calendar, Matrix} from '@hjco/layout-schedule'
 
 // Select the instance or algorithm
 const instance = (width, _, events) => new Matrix(events, width);
-// Create a new calendar, pass a HTMLElement, JSON, and the instance 
+// Create a new calendar, pass the width and height, the input events, and the instance 
 calendar = new Calendar(width, height, input, instance);
 // Draw each received slot wherever you prefer
 calendar.draw(drawSlotFunction);
