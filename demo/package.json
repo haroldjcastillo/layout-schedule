@@ -12,5 +12,8 @@
   "devDependencies": {
     "parcel": "^2.9.3",
     "rimraf": "^5.0.1"
+  },
+  "dependencies": {
+    "@hjco/layout-schedule": "^0.0.2"
   }
 }

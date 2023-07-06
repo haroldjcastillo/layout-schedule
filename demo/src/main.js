@@ -1,4 +1,4 @@
-import {Calendar, Matrix} from '../../src'
+import {Calendar, Matrix} from '@hjco/layout-schedule'
 import data from './input.json'
 
 const calendarDiv = document.getElementById("calendar");
