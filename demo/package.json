@@ -1,0 +1,16 @@
+{
+  "name": "layout-schedule-demo",
+  "version": "1.0.0",
+  "description": "Layout Schedule Demo",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "rimraf dist && parcel",
+    "build": "rimraf dist && parcel build"
+  },
+  "author": "haroldjcastillo",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "rimraf": "^5.0.1"
+  }
+}

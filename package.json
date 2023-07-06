@@ -1,13 +1,13 @@
 {
   "name": "@hjco/layout-schedule",
   "description": "Layout events into a calendar for visualization",
-  "version": "0.0.1",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "version": "0.0.2",
+  "main": "./dist/src/index.js",
+  "module": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
     "test": "mocha --require ts-node/register test/**/*.spec.ts",
-    "build": "tsc && tsc --build"
+    "build": "rimraf dist && tsc && tsc --build"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "@types/mocha": "^10.0.1",
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
+    "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
   }
 }
